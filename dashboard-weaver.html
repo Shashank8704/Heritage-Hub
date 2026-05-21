@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weaver Dashboard | ThreadCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Top Header -->
+    <header style="height: 60px;">
+        <div class="container navbar" style="height: 60px;">
+            <a href="index.html" class="logo" style="font-size: 1.5rem;">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+            </a>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <span class="material-icons-outlined">notifications</span>
+                <div style="width: 35px; height: 35px; border-radius: 50%; background: var(--secondary); color: white; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="images/weaver-portrait.png" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div style="padding: 0 24px;">
+                <p style="font-size: 0.85rem; color: #a0aec0; text-transform: uppercase;">Weaver Portal</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><span class="material-icons-outlined">dashboard</span> Overview</a></li>
+                <li><a href="#"><span class="material-icons-outlined">inventory_2</span> My Products</a></li>
+                <li><a href="#"><span class="material-icons-outlined">shopping_cart</span> Active Orders <span style="background: var(--primary); color: white; border-radius: 10px; padding: 2px 8px; font-size: 0.75rem; margin-left: auto;">3</span></a></li>
+                <li><a href="#"><span class="material-icons-outlined">chat</span> Customer Messages</a></li>
+                <li><a href="#"><span class="material-icons-outlined">account_balance_wallet</span> Earnings</a></li>
+                <li><a href="index.html"><span class="material-icons-outlined">logout</span> Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <div>
+                    <h2>Namaskaram, Lakshmi!</h2>
+                    <p style="color: var(--text-muted);">You have 1 new custom design request to review.</p>
+                </div>
+                <a href="#" class="btn btn-primary"><span class="material-icons-outlined">add</span> List New Product</a>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons-outlined">payments</span></div>
+                    <div class="stat-info">
+                        <h3>This Month's Earnings</h3>
+                        <div class="stat-value">₹42,500</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons-outlined">pending_actions</span></div>
+                    <div class="stat-info">
+                        <h3>Orders to Weave</h3>
+                        <div class="stat-value">3</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons-outlined">star</span></div>
+                    <div class="stat-info">
+                        <h3>Customer Rating</h3>
+                        <div class="stat-value">4.9/5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Custom Request Alert -->
+            <div style="background: rgba(201, 122, 126, 0.1); border: 1px solid rgba(201, 122, 126, 0.3); border-radius: var(--radius); padding: 24px; margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                    <div style="background: white; padding: 12px; border-radius: 50%; color: var(--primary);">
+                        <span class="material-icons-outlined">brush</span>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 4px; font-family: var(--font-body);">New Custom Design Request!</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem;">Ananya K. requested a Custom Ikat Saree (Indigo & Gold). She uploaded a reference motif.</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px;">
+                    <button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">Decline</button>
+                    <button class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Review & Accept</button>
+                </div>
+            </div>
+
+            <!-- Current Loom Queue Table -->
+            <div class="table-container">
+                <div style="padding: 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0; font-family: var(--font-body); font-weight: 600;">Current Loom Queue</h3>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Item Details</th>
+                            <th>Customer</th>
+                            <th>Status / Progress</th>
+                            <th>Target Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#TC-8492</td>
+                            <td><strong>Custom Ikat Saree</strong><br><small style="color: var(--text-muted);">Silk, 6.5 meters</small></td>
+                            <td>Ananya K.</td>
+                            <td>
+                                <span class="status-badge status-progress" style="display: inline-block; margin-bottom: 8px;">On The Loom (40%)</span>
+                                <div style="width: 100%; height: 6px; background: var(--border); border-radius: 3px;">
+                                    <div style="width: 40%; height: 100%; background: #004085; border-radius: 3px;"></div>
+                                </div>
+                            </td>
+                            <td>Oct 15, 2026</td>
+                            <td><a href="#" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.8rem;">Update Progress</a></td>
+                        </tr>
+                        <tr>
+                            <td>#TC-8455</td>
+                            <td><strong>Yellow Ikat Dupatta</strong><br><small style="color: var(--text-muted);">Cotton, 2.5 meters</small></td>
+                            <td>Priya M.</td>
+                            <td>
+                                <span class="status-badge status-pending" style="display: inline-block; margin-bottom: 8px;">Dyeing Yarn</span>
+                                <div style="width: 100%; height: 6px; background: var(--border); border-radius: 3px;">
+                                    <div style="width: 15%; height: 100%; background: #856404; border-radius: 3px;"></div>
+                                </div>
+                            </td>
+                            <td>Oct 20, 2026</td>
+                            <td><a href="#" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.8rem;">Update Progress</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
