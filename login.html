@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ThreadCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body style="background-color: var(--bg-light);">
+    
+    <!-- Simple Header -->
+    <header>
+        <div class="container navbar" style="justify-content: center;">
+            <a href="index.html" class="logo">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2>Welcome Back</h2>
+                <p>Log in to your ThreadCraft account</p>
+            </div>
+
+            <form action="catalog.html">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" style="color: var(--primary);">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Log In</button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="register.html">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
