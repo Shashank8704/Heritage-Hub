@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard | ThreadCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Top Header -->
+    <header style="height: 60px;">
+        <div class="container navbar" style="height: 60px;">
+            <a href="index.html" class="logo" style="font-size: 1.5rem;">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+            </a>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <span class="material-icons-outlined">notifications</span>
+                <div style="width: 35px; height: 35px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">AK</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div style="padding: 0 24px;">
+                <p style="font-size: 0.85rem; color: #a0aec0; text-transform: uppercase;">Customer Portal</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><span class="material-icons-outlined">dashboard</span> Overview</a></li>
+                <li><a href="#"><span class="material-icons-outlined">shopping_bag</span> My Orders</a></li>
+                <li><a href="custom-design.html"><span class="material-icons-outlined">brush</span> Custom Requests</a></li>
+                <li><a href="#"><span class="material-icons-outlined">chat</span> Messages <span style="background: #e74c3c; color: white; border-radius: 10px; padding: 2px 8px; font-size: 0.75rem; margin-left: auto;">1</span></a></li>
+                <li><a href="#"><span class="material-icons-outlined">favorite</span> Saved Weavers</a></li>
+                <li><a href="index.html"><span class="material-icons-outlined">logout</span> Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <div>
+                    <h2>Welcome back, Ananya!</h2>
+                    <p style="color: var(--text-muted);">Here's what's happening with your handloom orders.</p>
+                </div>
+                <a href="custom-design.html" class="btn btn-primary"><span class="material-icons-outlined">add</span> New Custom Design</a>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons-outlined">local_shipping</span></div>
+                    <div class="stat-info">
+                        <h3>Active Orders</h3>
+                        <div class="stat-value">2</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons-outlined">check_circle</span></div>
+                    <div class="stat-info">
+                        <h3>Completed</h3>
+                        <div class="stat-value">5</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons-outlined">savings</span></div>
+                    <div class="stat-info">
+                        <h3>Middlemen Fees Avoided</h3>
+                        <div class="stat-value">₹12,400</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders Table -->
+            <div class="table-container">
+                <div style="padding: 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0; font-family: var(--font-body); font-weight: 600;">Recent Orders</h3>
+                    <a href="#" style="color: var(--primary); font-size: 0.875rem;">View All</a>
+                </div>
+                <table class="dashboard-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Product</th>
+                            <th>Weaver</th>
+                            <th>Status</th>
+                            <th>Est. Delivery</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#TC-8492</td>
+                            <td><strong>Custom Ikat Saree</strong><br><small style="color: var(--text-muted);">Indigo & Gold</small></td>
+                            <td>Lakshmi Devi</td>
+                            <td><span class="status-badge status-progress">On The Loom</span></td>
+                            <td>Oct 15, 2026</td>
+                            <td><a href="order-tracking.html" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.8rem;">Track</a></td>
+                        </tr>
+                        <tr>
+                            <td>#TC-8410</td>
+                            <td><strong>Chanderi Dupatta</strong><br><small style="color: var(--text-muted);">Rose Gold Floral</small></td>
+                            <td>Meera S.</td>
+                            <td><span class="status-badge status-pending">Awaiting Materials</span></td>
+                            <td>Oct 22, 2026</td>
+                            <td><a href="order-tracking.html" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.8rem;">Track</a></td>
+                        </tr>
+                        <tr>
+                            <td>#TC-7992</td>
+                            <td><strong>Banarasi Silk Saree</strong><br><small style="color: var(--text-muted);">Bridal Red</small></td>
+                            <td>Abdul Rahman</td>
+                            <td><span class="status-badge status-completed">Delivered</span></td>
+                            <td>Sep 02, 2026</td>
+                            <td><a href="#" style="color: var(--primary); font-size: 0.875rem;">Leave Review</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
