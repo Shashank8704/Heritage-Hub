@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout | ThreadCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body style="background-color: var(--bg-light);">
+    
+    <header>
+        <div class="container navbar" style="justify-content: center; height: 60px;">
+            <a href="index.html" class="logo">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+                <span style="font-family: var(--font-body); font-size: 1rem; color: var(--text-muted); font-weight: normal; margin-left: 8px;">| Secure Checkout</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="container checkout-layout">
+        <!-- Left Column: Forms -->
+        <main>
+            <form action="order-tracking.html">
+                <!-- Shipping Details -->
+                <div class="checkout-section">
+                    <h3><span class="material-icons-outlined">local_shipping</span> Shipping Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control" value="Ananya" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" value="K" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" class="form-control" placeholder="House/Flat No., Street Name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>PIN Code</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Details -->
+                <div class="checkout-section">
+                    <h3><span class="material-icons-outlined">payment</span> Payment Method</h3>
+                    <div class="payment-methods">
+                        <label class="payment-option selected">
+                            <input type="radio" name="payment" checked>
+                            <span style="font-weight: 500;">UPI (GPay, PhonePe, Paytm)</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <span style="font-weight: 500;">Credit / Debit Card</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <span style="font-weight: 500;">Net Banking</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment">
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="font-weight: 500;">Advance Payment (Custom Orders)</span>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">Pay 50% now, 50% before shipping</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 16px;">Place Order Securely</button>
+                <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted); margin-top: 16px;">
+                    <span class="material-icons-outlined" style="font-size: 16px; vertical-align: middle;">lock</span> Payments are processed securely. The weaver receives their payment immediately.
+                </p>
+            </form>
+        </main>
+
+        <!-- Right Column: Order Summary & Transparent Pricing -->
+        <aside>
+            <div class="summary-card">
+                <h3 style="margin-bottom: 1.5rem; font-family: var(--font-heading); font-size: 1.5rem;">Order Summary</h3>
+                
+                <div class="summary-item">
+                    <img src="images/product-saree.png" alt="Product" class="summary-img">
+                    <div class="summary-info">
+                        <h4>Deep Indigo Zari Saree</h4>
+                        <p>Banarasi Silk</p>
+                        <p style="margin-top: 8px;">Woven by: Lakshmi Devi</p>
+                    </div>
+                </div>
+
+                <!-- The core value proposition: Transparent Pricing -->
+                <div class="transparent-pricing">
+                    <div class="pricing-title">
+                        <span class="material-icons-outlined" style="color: var(--accent);">verified</span> 
+                        Transparent Pricing Breakdown
+                    </div>
+                    
+                    <div class="pricing-row weaver-cut">
+                        <span>Weaver's Earnings (Labor & Skill)</span>
+                        <span>₹4,500</span>
+                    </div>
+                    <div class="pricing-row">
+                        <span>Raw Materials (Silk Yarn & Zari)</span>
+                        <span>₹3,500</span>
+                    </div>
+                    <div class="pricing-row" style="border-bottom: 1px dashed var(--border); padding-bottom: 8px; margin-bottom: 8px;">
+                        <span>Shipping & Logistics (India Post)</span>
+                        <span>₹250</span>
+                    </div>
+                    <div class="pricing-row">
+                        <span>Platform Fee (0%) - Waived</span>
+                        <span>₹0</span>
+                    </div>
+                    <div class="pricing-row" style="color: #e74c3c; font-weight: 500; font-size: 0.8rem; margin-top: 8px;">
+                        <span>Retail Price in Boutiques: ~₹18,000+</span>
+                    </div>
+                </div>
+
+                <div class="pricing-row">
+                    <span>Subtotal</span>
+                    <span>₹8,000</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Shipping</span>
+                    <span>₹250</span>
+                </div>
+                <div class="pricing-total">
+                    <span>Total You Pay</span>
+                    <span>₹8,250</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>
