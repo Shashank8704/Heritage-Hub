@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Handlooms | ThreadCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+            </a>
+            <nav class="nav-links">
+                <a href="catalog.html" style="color: var(--primary);">Shop Handlooms</a>
+                <a href="#">Custom Design</a>
+                <a href="weavers.html">Meet the Weavers</a>
+                <a href="#">Our Story</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container catalog-layout">
+        
+        <!-- Sidebar Filters -->
+        <aside class="filters-sidebar">
+            <div class="filter-group">
+                <h3 class="filter-title">Product Type</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" checked> Sarees</label>
+                    <label><input type="checkbox" checked> Dupattas</label>
+                    <label><input type="checkbox" checked> Fabrics by Meter</label>
+                    <label><input type="checkbox"> Home Furnishings</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3 class="filter-title">Craft / Weave</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox"> Banarasi</label>
+                    <label><input type="checkbox"> Chanderi</label>
+                    <label><input type="checkbox"> Ikat</label>
+                    <label><input type="checkbox"> Kanjeevaram</label>
+                    <label><input type="checkbox"> Khadi</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3 class="filter-title">Price Range</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox"> Under ₹2,000</label>
+                    <label><input type="checkbox"> ₹2,000 - ₹5,000</label>
+                    <label><input type="checkbox"> ₹5,000 - ₹10,000</label>
+                    <label><input type="checkbox"> Over ₹10,000</label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <main>
+            <div class="catalog-header">
+                <h2>All Products</h2>
+                <div>
+                    <select>
+                        <option>Sort by: Recommended</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/product-saree.png" alt="Indigo Silk Saree" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Banarasi Silk</div>
+                        <h3 class="product-title">Deep Indigo Zari Saree</h3>
+                        <div class="product-weaver">
+                            <span class="material-icons-outlined" style="font-size: 16px;">person</span>
+                            Woven by Lakshmi D.
+                        </div>
+                        <div class="product-price">
+                            <span class="price">₹8,500</span>
+                            <a href="checkout.html" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.875rem;">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/product-dupatta.png" alt="Chanderi Dupatta" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Chanderi Cotton</div>
+                        <h3 class="product-title">Rose Gold Floral Dupatta</h3>
+                        <div class="product-weaver">
+                            <span class="material-icons-outlined" style="font-size: 16px;">person</span>
+                            Woven by Meera S.
+                        </div>
+                        <div class="product-price">
+                            <span class="price">₹2,200</span>
+                            <a href="#" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.875rem;">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/product-fabric.png" alt="Handloom Fabrics" class="product-image">
+                    <div class="product-info">
+                        <div class="product-category">Khadi Cotton</div>
+                        <h3 class="product-title">Artisanal Fabric Bundle</h3>
+                        <div class="product-weaver">
+                            <span class="material-icons-outlined" style="font-size: 16px;">person</span>
+                            Woven by Ram K.
+                        </div>
+                        <div class="product-price">
+                            <span class="price">₹1,800</span>
+                            <a href="#" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.875rem;">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
