@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | ThreadCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body style="background-color: var(--bg-light);">
+    
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+            </a>
+            <div class="nav-actions">
+                <a href="dashboard-customer.html" class="btn btn-outline">My Dashboard</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container tracking-container">
+        
+        <div class="order-header">
+            <div>
+                <p style="color: var(--text-muted); font-size: 0.875rem; text-transform: uppercase;">Order #TC-8492</p>
+                <h2 style="font-family: var(--font-body);">Custom Ikat Saree</h2>
+                <p style="margin-top: 4px;"><strong>Artisan:</strong> Lakshmi Devi (Pochampally, TS)</p>
+            </div>
+            <div style="text-align: right;">
+                <p style="color: var(--text-muted); font-size: 0.875rem;">Expected Delivery</p>
+                <h3 style="color: var(--primary);">Oct 15, 2026</h3>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <!-- Event 1: Placed -->
+            <div class="timeline-event completed">
+                <div class="timeline-icon"><span class="material-icons-outlined" style="font-size: 16px;">receipt</span></div>
+                <div class="timeline-date">Sep 28, 2026 - 10:30 AM</div>
+                <div class="timeline-content">
+                    <h4>Order Placed & Design Finalized</h4>
+                    <p>You and Lakshmi finalized the indigo & gold design. The advance payment of ₹4,250 was successfully transferred to Lakshmi's account.</p>
+                </div>
+            </div>
+
+            <!-- Event 2: Materials -->
+            <div class="timeline-event completed">
+                <div class="timeline-icon"><span class="material-icons-outlined" style="font-size: 16px;">category</span></div>
+                <div class="timeline-date">Oct 01, 2026 - 02:15 PM</div>
+                <div class="timeline-content">
+                    <h4>Yarn Dyeing Process Started</h4>
+                    <p>Lakshmi has sourced pure silk yarn and has begun the intricate tie-and-dye (Ikat) process for your chosen motif.</p>
+                </div>
+            </div>
+
+            <!-- Event 3: On Loom (Active) -->
+            <div class="timeline-event active">
+                <div class="timeline-icon"><span class="material-icons-outlined" style="font-size: 16px;">precision_manufacturing</span></div>
+                <div class="timeline-date">Oct 05, 2026 - 11:00 AM (Current Status)</div>
+                <div class="timeline-content">
+                    <h4>On the Loom! (40% Complete)</h4>
+                    <p>Lakshmi has updated your order status. She is currently weaving the main body of the saree. She sent you a photo of the progress!</p>
+                    <img src="images/hero-weaver.png" alt="Loom Progress" class="loom-image">
+                    <div style="margin-top: 16px;">
+                        <button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.875rem;"><span class="material-icons-outlined" style="font-size: 18px; margin-right: 4px;">chat</span> Send message to Lakshmi</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 4: Quality Check (Pending) -->
+            <div class="timeline-event">
+                <div class="timeline-icon"></div>
+                <div class="timeline-date">Pending</div>
+                <div class="timeline-content">
+                    <h4>Quality Check & Finishing</h4>
+                    <p>Once weaving is complete, the saree will be washed, ironed, and checked for quality before packing.</p>
+                </div>
+            </div>
+
+            <!-- Event 5: Shipped (Pending) -->
+            <div class="timeline-event">
+                <div class="timeline-icon"></div>
+                <div class="timeline-date">Pending</div>
+                <div class="timeline-content">
+                    <h4>Shipped directly from Village</h4>
+                    <p>The package will be handed over to India Post Rural Logistics for delivery to your address.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
