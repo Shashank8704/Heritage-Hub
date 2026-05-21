@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | ThreadCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body style="background-color: var(--bg-light);">
+    
+    <header>
+        <div class="container navbar" style="justify-content: center;">
+            <a href="index.html" class="logo">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2>Join ThreadCraft</h2>
+                <p>Are you a customer or a weaver?</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="auth-tabs">
+                <div class="auth-tab active" onclick="switchTab('customer')" id="tab-customer">I am a Customer</div>
+                <div class="auth-tab" onclick="switchTab('weaver')" id="tab-weaver">I am a Weaver</div>
+            </div>
+
+            <!-- Customer Form -->
+            <form action="catalog.html" id="form-customer">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="c-email">Email Address</label>
+                    <input type="email" id="c-email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="c-password">Password</label>
+                    <input type="password" id="c-password" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Customer Account</button>
+            </form>
+
+            <!-- Weaver Form (Hidden by default) -->
+            <form action="dashboard-weaver.html" id="form-weaver" style="display: none;">
+                <div class="form-group">
+                    <label for="w-name">Full Name</label>
+                    <input type="text" id="w-name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="w-phone">Phone Number (WhatsApp)</label>
+                    <input type="tel" id="w-phone" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="w-location">Village / Town / City</label>
+                    <input type="text" id="w-location" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="w-craft">Specialty Craft (e.g. Banarasi, Ikat)</label>
+                    <select id="w-craft" class="form-control" required>
+                        <option value="">Select your specialty</option>
+                        <option value="banarasi">Banarasi Silk</option>
+                        <option value="chanderi">Chanderi</option>
+                        <option value="ikat">Ikat / Pochampally</option>
+                        <option value="kanjeevaram">Kanjeevaram</option>
+                        <option value="khadi">Khadi / Cotton</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-secondary" style="width: 100%;">Apply as Weaver</button>
+                <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 1rem;">Our team will contact you to verify your artisan status.</p>
+            </form>
+
+            <div class="auth-footer">
+                Already have an account? <a href="login.html">Log in</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(type) {
+            // Update tabs
+            document.getElementById('tab-customer').classList.remove('active');
+            document.getElementById('tab-weaver').classList.remove('active');
+            document.getElementById('tab-' + type).classList.add('active');
+
+            // Update forms
+            document.getElementById('form-customer').style.display = 'none';
+            document.getElementById('form-weaver').style.display = 'none';
+            document.getElementById('form-' + type).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
