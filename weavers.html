@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Weavers | ThreadCraft</title>
+    <meta name="description" content="Meet the master weavers behind ThreadCraft. Discover their stories, crafts, and handloom traditions from across India.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <style>
+        .weavers-hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1a252f 100%);
+            padding: 5rem 0;
+            text-align: center;
+            color: white;
+        }
+        .weavers-hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .weavers-hero p {
+            font-size: 1.125rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .weavers-listing {
+            padding: 5rem 0;
+        }
+        .weaver-full-card {
+            display: flex;
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+        .weaver-full-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .weaver-full-card .weaver-photo {
+            width: 35%;
+            min-height: 320px;
+            object-fit: cover;
+        }
+        .weaver-full-card .weaver-details {
+            width: 65%;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .weaver-full-card .weaver-details h2 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .weaver-meta {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .weaver-meta span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .weaver-meta .material-icons-outlined {
+            font-size: 18px;
+        }
+        .weaver-full-card .weaver-quote {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            border-left: 3px solid var(--primary);
+            padding-left: 16px;
+        }
+        .specialties {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        .specialty-tag {
+            background: rgba(201, 122, 126, 0.1);
+            color: var(--primary-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .weaver-full-card .weaver-actions {
+            display: flex;
+            gap: 12px;
+        }
+        .join-cta {
+            background: linear-gradient(135deg, rgba(201, 122, 126, 0.1) 0%, rgba(244, 208, 63, 0.1) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 3rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .join-cta h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .join-cta p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+            </a>
+            <nav class="nav-links">
+                <a href="catalog.html">Shop Handlooms</a>
+                <a href="custom-design.html">Custom Design</a>
+                <a href="weavers.html" style="color: var(--primary);">Meet the Weavers</a>
+                <a href="our-story.html">Our Story</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="weavers-hero">
+        <div class="container">
+            <h1>Meet the Master Weavers</h1>
+            <p>Every product on ThreadCraft is handwoven by a real artisan with decades of skill. Get to know the people behind the loom.</p>
+        </div>
+    </section>
+
+    <!-- Weavers Listing -->
+    <section class="weavers-listing">
+        <div class="container">
+
+            <!-- Weaver 1: Lakshmi Devi -->
+            <div class="weaver-full-card">
+                <img src="images/weaver-portrait.png" alt="Lakshmi Devi" class="weaver-photo">
+                <div class="weaver-details">
+                    <h2>Lakshmi Devi</h2>
+                    <div class="weaver-meta">
+                        <span><span class="material-icons-outlined">location_on</span> Pochampally, Telangana</span>
+                        <span><span class="material-icons-outlined">handyman</span> 25 Years Experience</span>
+                        <span><span class="material-icons-outlined">star</span> 4.9 (42 Reviews)</span>
+                    </div>
+                    <div class="specialties">
+                        <span class="specialty-tag">Ikat Weaving</span>
+                        <span class="specialty-tag">Pure Silk</span>
+                        <span class="specialty-tag">Cotton Sarees</span>
+                    </div>
+                    <p class="weaver-quote">"I have been weaving Ikat patterns since I was a young girl, learning the craft from my mother. Through ThreadCraft, I can finally speak to the people who wear my sarees and make exactly what they want."</p>
+                    <div class="weaver-actions">
+                        <a href="weaver-profile.html" class="btn btn-primary">View Profile & Products</a>
+                        <a href="custom-design.html" class="btn btn-outline">Request Custom Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weaver 2: Abdul Rahman -->
+            <div class="weaver-full-card">
+                <img src="images/hero-weaver.png" alt="Abdul Rahman" class="weaver-photo" style="object-position: center;">
+                <div class="weaver-details">
+                    <h2>Abdul Rahman</h2>
+                    <div class="weaver-meta">
+                        <span><span class="material-icons-outlined">location_on</span> Varanasi, Uttar Pradesh</span>
+                        <span><span class="material-icons-outlined">handyman</span> 30 Years Experience</span>
+                        <span><span class="material-icons-outlined">star</span> 4.8 (38 Reviews)</span>
+                    </div>
+                    <div class="specialties">
+                        <span class="specialty-tag">Banarasi Silk</span>
+                        <span class="specialty-tag">Zari Work</span>
+                        <span class="specialty-tag">Bridal Collection</span>
+                    </div>
+                    <p class="weaver-quote">"My family has woven Banarasi silk for four generations. We specialize in custom bridal orders with personalized motifs. Each saree takes 15-30 days of meticulous handwork."</p>
+                    <div class="weaver-actions">
+                        <a href="weaver-profile.html" class="btn btn-primary">View Profile & Products</a>
+                        <a href="custom-design.html" class="btn btn-outline">Request Custom Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weaver 3: Meera Sharma -->
+            <div class="weaver-full-card">
+                <img src="images/product-dupatta.png" alt="Meera Sharma" class="weaver-photo" style="object-position: center;">
+                <div class="weaver-details">
+                    <h2>Meera Sharma</h2>
+                    <div class="weaver-meta">
+                        <span><span class="material-icons-outlined">location_on</span> Chanderi, Madhya Pradesh</span>
+                        <span><span class="material-icons-outlined">handyman</span> 18 Years Experience</span>
+                        <span><span class="material-icons-outlined">star</span> 4.7 (29 Reviews)</span>
+                    </div>
+                    <div class="specialties">
+                        <span class="specialty-tag">Chanderi Cotton</span>
+                        <span class="specialty-tag">Dupattas</span>
+                        <span class="specialty-tag">Floral Motifs</span>
+                    </div>
+                    <p class="weaver-quote">"Chanderi weaving is about lightness and elegance. I love creating dupattas with delicate floral borders that can be worn every day. When a customer tells me they love my work, it keeps me going."</p>
+                    <div class="weaver-actions">
+                        <a href="weaver-profile.html" class="btn btn-primary">View Profile & Products</a>
+                        <a href="custom-design.html" class="btn btn-outline">Request Custom Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Join CTA -->
+            <div class="join-cta">
+                <h3>Are You a Weaver?</h3>
+                <p>Join ThreadCraft to sell your handloom creations directly to customers — no middlemen, fair prices, and full creative control.</p>
+                <a href="register.html" class="btn btn-primary">Apply as a Weaver</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="material-icons-outlined">texture</span> ThreadCraft
+                    </a>
+                    <p>Empowering rural weavers by connecting them directly with consumers for customized, authentic handloom products.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">For Customers</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Shop Handlooms</a></li>
+                        <li><a href="custom-design.html">Request Custom Design</a></li>
+                        <li><a href="our-story.html">How it Works</a></li>
+                        <li><a href="order-tracking.html">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">For Weavers</h4>
+                    <ul class="footer-links">
+                        <li><a href="register.html">Join the Platform</a></li>
+                        <li><a href="dashboard-weaver.html">Seller Dashboard</a></li>
+                        <li><a href="our-story.html">Community Guidelines</a></li>
+                        <li><a href="our-story.html">Support Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="our-story.html">About Us</a></li>
+                        <li><a href="our-story.html">Contact</a></li>
+                        <li><a href="our-story.html">Privacy Policy</a></li>
+                        <li><a href="our-story.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ThreadCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
