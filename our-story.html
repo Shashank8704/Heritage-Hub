@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | ThreadCraft</title>
+    <meta name="description" content="ThreadCraft connects you directly with India's rural master weavers. No middlemen, fair prices, authentic handloom.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <style>
+        .story-hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1a252f 100%);
+            padding: 5rem 0;
+            text-align: center;
+            color: white;
+        }
+        .story-hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .story-hero p {
+            font-size: 1.125rem;
+            opacity: 0.85;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .story-section {
+            padding: 5rem 0;
+        }
+        .story-section:nth-child(even) {
+            background-color: var(--bg-white);
+        }
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .story-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .story-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .problem-card, .solution-card {
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .problem-card {
+            background: rgba(231, 76, 60, 0.05);
+            border-color: rgba(231, 76, 60, 0.2);
+        }
+        .problem-card h3 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .solution-card {
+            background: rgba(30, 132, 73, 0.05);
+            border-color: rgba(30, 132, 73, 0.2);
+        }
+        .solution-card h3 {
+            color: #1e8449;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .problem-card ul, .solution-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .problem-card li, .solution-card li {
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .problem-card li .material-icons-outlined {
+            color: #e74c3c;
+            font-size: 18px;
+            margin-top: 2px;
+        }
+        .solution-card li .material-icons-outlined {
+            color: #1e8449;
+            font-size: 18px;
+            margin-top: 2px;
+        }
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 3rem;
+        }
+        .impact-stat {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .impact-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .impact-stat .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: var(--font-heading);
+        }
+        .impact-stat .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 2rem;
+        }
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .value-card .value-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        .value-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+        .value-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(201, 122, 126, 0.1) 0%, rgba(244, 208, 63, 0.1) 100%);
+        }
+        .cta-section h2 {
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span class="material-icons-outlined">texture</span> ThreadCraft
+            </a>
+            <nav class="nav-links">
+                <a href="catalog.html">Shop Handlooms</a>
+                <a href="custom-design.html">Custom Design</a>
+                <a href="weavers.html">Meet the Weavers</a>
+                <a href="our-story.html" style="color: var(--primary);">Our Story</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="story-hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>ThreadCraft was born from a simple belief: the people who create beautiful things deserve to be paid fairly for their craft.</p>
+        </div>
+    </section>
+
+    <!-- The Problem & Solution -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>The Problem We're Solving</h2>
+                <p>India's handloom industry supports over 4.3 million weavers, yet most live below the poverty line. The traditional supply chain involves 4–6 middlemen between the weaver and the customer, each taking a cut. A saree that a weaver sells for ₹2,000 often retails for ₹15,000+.</p>
+            </div>
+            <div class="problem-solution" style="max-width: 800px; margin: 0 auto;">
+                <div class="problem-card">
+                    <h3><span class="material-icons-outlined">warning</span> The Old Way</h3>
+                    <ul>
+                        <li><span class="material-icons-outlined">close</span> Weavers earn only 10-15% of the retail price</li>
+                        <li><span class="material-icons-outlined">close</span> 4-6 middlemen inflate costs</li>
+                        <li><span class="material-icons-outlined">close</span> No customer-weaver connection</li>
+                        <li><span class="material-icons-outlined">close</span> Mass-produced fakes compete unfairly</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <h3><span class="material-icons-outlined">check_circle</span> The ThreadCraft Way</h3>
+                    <ul>
+                        <li><span class="material-icons-outlined">check</span> Weavers keep 100% of their craft's value</li>
+                        <li><span class="material-icons-outlined">check</span> Zero middlemen, direct platform</li>
+                        <li><span class="material-icons-outlined">check</span> Direct messaging with artisans</li>
+                        <li><span class="material-icons-outlined">check</span> Transparent pricing breakdown</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="story-section" style="background-color: var(--bg-white);">
+        <div class="container">
+            <div class="story-content">
+                <h2>Our Impact So Far</h2>
+            </div>
+            <div class="impact-grid" style="max-width: 900px; margin: 3rem auto 0;">
+                <div class="impact-stat">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Weavers Onboarded</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-number">₹85L</div>
+                    <div class="stat-label">Direct Earnings to Weavers</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">States Covered</div>
+                </div>
+                <div class="impact-stat">
+                    <div class="stat-number">4,200+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2>What We Stand For</h2>
+            </div>
+            <div class="values-grid" style="max-width: 900px; margin: 2rem auto 0;">
+                <div class="value-card">
+                    <div class="value-icon"><span class="material-icons-outlined">handshake</span></div>
+                    <h3>Fair Trade</h3>
+                    <p>Every rupee is transparently split. Weavers are paid directly — no commissions, no delays.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><span class="material-icons-outlined">eco</span></div>
+                    <h3>Sustainability</h3>
+                    <p>Handloom is inherently eco-friendly. Zero carbon, zero waste — powered by human skill and natural fibers.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><span class="material-icons-outlined">diversity_3</span></div>
+                    <h3>Preserving Heritage</h3>
+                    <p>Each weave carries centuries of tradition. We help artisans pass their craft to the next generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">Ready to Make a Difference?</h2>
+            <p>Shop authentic handlooms or join as a weaver. Either way, you're supporting real artisans.</p>
+            <div class="cta-buttons">
+                <a href="catalog.html" class="btn btn-primary">Shop Handlooms</a>
+                <a href="register.html" class="btn btn-secondary">Join as Weaver</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="material-icons-outlined">texture</span> ThreadCraft
+                    </a>
+                    <p>Empowering rural weavers by connecting them directly with consumers for customized, authentic handloom products.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">For Customers</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Shop Handlooms</a></li>
+                        <li><a href="custom-design.html">Request Custom Design</a></li>
+                        <li><a href="our-story.html">How it Works</a></li>
+                        <li><a href="order-tracking.html">Track Order</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">For Weavers</h4>
+                    <ul class="footer-links">
+                        <li><a href="register.html">Join the Platform</a></li>
+                        <li><a href="dashboard-weaver.html">Seller Dashboard</a></li>
+                        <li><a href="our-story.html">Community Guidelines</a></li>
+                        <li><a href="our-story.html">Support Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="our-story.html">About Us</a></li>
+                        <li><a href="our-story.html">Contact</a></li>
+                        <li><a href="our-story.html">Privacy Policy</a></li>
+                        <li><a href="our-story.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ThreadCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
